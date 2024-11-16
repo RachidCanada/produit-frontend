@@ -1,0 +1,28 @@
+<h1>Liste des Produits</h1>
+
+<form (ngSubmit)="addProduit(nom.value, +prix.value)">
+  <input #nom type="text" placeholder="Nom du produit">
+  <input #prix type="number" placeholder="Prix du produit">
+  <button type="submit">Ajouter</button>
+</form>
+
+<ul>
+  <li *ngFor="let produit of produits">
+    {{ produit.nom }} - {{ produit.prix | currency }}
+    <button (click)="deleteProduit(produit.id)">Supprimer</button>
+  </li>
+</ul>
+<h1>Liste des Produits</h1>
+
+<form (ngSubmit)="addProduit(nom.value, +prix.value)">
+  <input #nom type="text" placeholder="Nom du produit">
+  <input #prix type="number" placeholder="Prix du produit">
+  <button type="submit">Ajouter</button>
+</form>
+
+<ul>
+  <li *ngFor="let produit of produits">
+    {{ produit.nom }} - {{ produit.prix | currency }}
+    <button (click)="deleteProduit(produit.id)">Supprimer</button>
+  </li>
+</ul>
